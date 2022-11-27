@@ -17,7 +17,7 @@ import dj_database_url
 from pathlib import Path
 
 
-development = os.environ.get('DATABASE_URL', True)
+development = os.environ.get('DATABASE_URL')
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
