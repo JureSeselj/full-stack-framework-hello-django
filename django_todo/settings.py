@@ -16,7 +16,7 @@ from pathlib import Path
 if os.path.isfile("env.py"):
     import env
 
-development = "DEVELOPMENT" in os.environ
+development = os.environ.get("DATABASE_URL")
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
