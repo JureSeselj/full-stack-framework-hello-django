@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
-from pathlib import Path
 import os
 import dj_database_url
-import env
+from pathlib import Path
+if os.path.isfile("env.py"):
+    import env
+
+development = "DEVELOPMENT" in os.environ
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
